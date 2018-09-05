@@ -1,4 +1,5 @@
 # for문 쓰지 말고 해보세요
+# 0이 나오는 이유는?
 def sum_start_to_end(start, end, accu):
 
     if(start < end):
