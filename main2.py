@@ -1,8 +1,13 @@
 def solution(array):
     different = 0
     sorted_array = sorted(array)
-    for i, j in zip(array, sorted_array):
-        if(i != j):
+
+    # for i, j in zip(array, sorted_array):
+    #     if(i != j):
+    #         different += 1
+
+    for i in range(0, len(array)):
+        if(array[i] != sorted_array[i]):
             different += 1
 
     if(different == 2):
