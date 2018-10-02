@@ -1,4 +1,4 @@
-is_odds = lambda x : True if x % 2 == 1 else False
+is_odds = lambda x : x % 2 == 1
 
 def multiple1(n, a):
     if(n == 1): return a
