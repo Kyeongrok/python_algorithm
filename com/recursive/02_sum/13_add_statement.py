@@ -1,5 +1,4 @@
 arr = [7, 3, 2, 9]
-
 def sum(arr, accu):
     print(arr, accu)
 
