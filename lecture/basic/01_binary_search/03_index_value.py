@@ -4,7 +4,11 @@ def binarySearch(arr, targetNum):
     start = 0
     end = len(arr) - 1
     midIndex = (start + end) // 2
-    print(start, end, midIndex)
+    indexValue = arr[midIndex]
+    print(start, end, midIndex, "indexValue:",indexValue)
+
+    if indexValue == targetNum:
+        return midIndex
     return -1
 
 print(binarySearch(numbers, 4))

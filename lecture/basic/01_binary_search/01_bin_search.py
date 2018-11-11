@@ -5,4 +5,4 @@ def binarySearch(arr, targetNum):
    print("midIndex=>", midIndex)
    return -1
 
-print(binarySearch(numbers, 8))
+print(binarySearch(numbers, 4))
