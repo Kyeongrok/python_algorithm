@@ -5,9 +5,9 @@ def binarySearch(arr, start, end, targetNum):
     if arr[midIndex] == targetNum:
         return midIndex
     elif arr[midIndex] > targetNum:
-        return binarySearch(arr, start, midIndex, targetNum)
+        return binarySearch(arr, start, midIndex - 1, targetNum)
     elif arr[midIndex] < targetNum:
-        return binarySearch(arr, midIndex, end, targetNum)
+        return binarySearch(arr, midIndex + 1, end, targetNum)
 
     return -1
 
