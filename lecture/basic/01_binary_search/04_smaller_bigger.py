@@ -10,9 +10,9 @@ def binarySearch(arr, targetNum):
     if indexValue == targetNum:
         return midIndex
     elif indexValue < targetNum:
-        start = midIndex
+        start = midIndex + 1
     elif indexValue > targetNum:
-        end = midIndex
+        end = midIndex - 1
 
     print("start:",start, "end:",end, "midIndex:", midIndex,
           "targetNum:", targetNum, "indexValue:",indexValue)
