@@ -1,5 +1,4 @@
 num = 687
-
 def sum(num):
     sum = 0
     while num != 0:
