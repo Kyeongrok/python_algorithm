@@ -8,11 +8,11 @@
 ## ex)
 * A = [3, 2, 2, 1], K = 3
 * 답: 3
-* Explanation: 3 boxes with weights (1, 2), (2) and (3)
+* 설명: 3개 박스 각각의 무게 (1, 2), (2) and (3)
 
 * A = [3, 5, 3, 4], K = 5
 * 답: 4
-* Explanation: 4 boxes with weights (3), (3), (4), (5)
+* 설명: 4개 박스 각각의 무게 (3), (3), (4), (5)
 
 
 

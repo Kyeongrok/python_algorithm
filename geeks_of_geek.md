@@ -4,3 +4,6 @@
 3. 주어진 숫자의 합을 구하세요.
 * ex) 687 = 21, 12 = 3
 
+# Easy
+1. [가장큰 부분 집합](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)
+
