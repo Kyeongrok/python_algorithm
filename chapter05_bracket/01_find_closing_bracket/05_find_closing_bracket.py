@@ -1,11 +1,9 @@
 def findClosingBracketIndex(str, openIndex):
     stack = []
     for index in range(openIndex, len(str)):
-        char = str[index]
         if(str[index] == "["):
-            stack.append(char)
-        elif(char == "]"):
-            # stack이 0보다 크면 stack에서 pop한다.
+            stack.append(str[index])
+        elif(str[index] == "]"):
             stack.pop()
 
         # stack에 아무것도 없으면 index를 return한다.
