@@ -3,5 +3,5 @@ def findClosingBracketIndex(str, openIndex):
 
     return -1
 string = "[[34]HELLO[74]]"
-print(findClosingBracketIndex(string, 1))
+print(findClosingBracketIndex(string, 0))
 
