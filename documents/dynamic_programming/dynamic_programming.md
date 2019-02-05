@@ -21,6 +21,13 @@ fib(3)연산은 두번 반복이 됩니다. 이 결과를 저장 해놓는다면
 
 
 # Optimal Substructure
+아래 주어진 문제는 최적의 서브 구조의 요소를 가지고 있다.
+
+Shortest Path 알고리즘은 Optimal Substructure를 가지고 있지만
+Longest Path는 최적 서브구조를 가지고 있지 않다.
+
+ 
+
 
 # Longest Common Subsequence
 
