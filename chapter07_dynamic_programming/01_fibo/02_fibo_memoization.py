@@ -11,4 +11,4 @@ def fib(n, lookup):
     return lookup[n]
 
 lookup = [None] * 101
-print(fib(6, lookup))
+print(fib(100, lookup))
