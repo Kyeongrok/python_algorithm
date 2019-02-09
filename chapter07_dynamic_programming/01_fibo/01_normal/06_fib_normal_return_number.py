@@ -14,6 +14,6 @@ def fib(n):
         first = second
         second = third
 
-    return result
+    return result.pop()
 
-print(fib(6))
+print(fib(100))
