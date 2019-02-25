@@ -9,8 +9,8 @@ def lcs(string1, string2):
                 memoList[i][j] = memoList[i-1][j-1] + 1
     return 0
 
-string1 = "abcdcba"
-string2 = "dcabdc"
+string1 = "ABCDCBA"
+string2 = "DCABDC"
 
 lcs(string1, string2)
 

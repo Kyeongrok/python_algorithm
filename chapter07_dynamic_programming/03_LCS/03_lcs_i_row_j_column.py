@@ -6,8 +6,8 @@ def lcs(string1, string2):
             print(memoList)
     return 0
 
-string1 = "abcdcba"
-string2 = "dcabdc"
+string1 = "ABCDCBA"
+string2 = "DCABDC"
 
 lcs(string1, string2)
 
