@@ -10,4 +10,11 @@ for i in range(len(seq2)):
             memo[i][j] = 1
         elif(i == 0 and j == 0 and seq2i != seq1j):
             memo[i][j] = 0
+        elif(i == 0 and j > 0 and seq2i == seq1j):
+            memo[i][j] = memo[i][j-1] + 1
+        elif(i == 0 and j > 0 and seq2i != seq1j):
+            memo[i][j] = memo[i][j-1]
+        else:
+            print(seq2[i], seq1[j])
+
 print(memo)

@@ -1,6 +1,6 @@
 seq1 = "ABCDCBA"
 seq2 = "DCABDC"
-memo = [[0]*len(seq1)]*len(seq2)
+memo = [[0]*len(seq1) for i in range(len(seq2))]
 
 # seq1, seq2에서 문자열 한개씩 뽑기
 for i in range(len(seq2)):
