@@ -20,14 +20,11 @@ def optimalStrategy(coins):
             x = coinLeft + dp[j + 1][j + i][1]
             y = coinRight + dp[j][j + i - 1][1]
             second = min(dp[j + 1][j + i][0], dp[j][j + i - 1][0])
-            print(i, x, y)
-            # print(j, j + i, coinLeft, coinRight, x, y, second)
             dp[j][j+i] = (max(x, y), second)
 
     print(dp)
     return dp[0][n-1]
 
-coins = [2, 7, 40, 19, 4, 9]
+coins = [2, 7, 40, 19]
 result = optimalStrategy(coins)
-
 print(result)

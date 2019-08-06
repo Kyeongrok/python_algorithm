@@ -5,6 +5,7 @@ def optimalStrategy(coins):
     # 숫자가 1개만 있는 경우
     for j in range(0, n):
         dp[j][j] = (coins[j], 0)
+
     print(dp)
     return 0
 
