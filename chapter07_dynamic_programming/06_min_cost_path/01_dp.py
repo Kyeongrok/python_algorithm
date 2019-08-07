@@ -1,6 +1,6 @@
 def getMinCost(matrix):
     n = len(matrix)
-    dp = [[0] * n] * n
+    dp = [[0] * n for i in range(n)]
 
     for row in dp:
         print(row)
