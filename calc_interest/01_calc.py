@@ -4,4 +4,4 @@ c = 전세자금대출이자 / 12
 creditLoan = 10_000_000
 creditLoanInterest = creditLoan * 0.044
 
-print(c + creditLoanInterest / 12)
+print(c, c + creditLoanInterest / 12)
