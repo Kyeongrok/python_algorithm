@@ -10,9 +10,10 @@ def solution(n, words):
             alreadyExist = False
 
         if first[len(first)-1] != second[0] or alreadyExist:
+            print(first, second, i+2)
             quote = (i + 2) // n
             remainder = n - (i + 2) % n
-            return [quote, remainder]
+            return [remainder, quote + 1]
         else:
             memo.append(second)
     return [0, 0]
@@ -20,3 +21,4 @@ def solution(n, words):
 
 
 print(solution(3, ['tank', 'kick', 'know', 'wheel', 'land', 'dream', 'mother', 'robot', 'tank']))
+print(solution(2, ['hello', 'one', 'even', 'never', 'now', 'world', 'draw']))
