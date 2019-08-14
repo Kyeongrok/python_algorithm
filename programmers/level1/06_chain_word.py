@@ -12,12 +12,11 @@ def solution(n, words):
         if first[len(first)-1] != second[0] or alreadyExist:
             quote = (i + 2) // n
             remainder = (i + 2) % n
-            nThPlayer = n - remainder
-            nThTry = quote + remainder
-            if i + 2 <= n:
-                nThPlayer = i + 2
-                nThTry = i + 1
-            print(first, second, i+2, quote, remainder)
+            nThPlayer = remainder
+            nThTry = quote + 1
+            if remainder == 0:
+                nThPlayer = n
+                nThTry = quote
             return [nThPlayer, nThTry]
         else:
             memo.append(second)
