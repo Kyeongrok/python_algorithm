@@ -2,6 +2,7 @@ seq1 = "ABCDCBA"
 seq2 = "DCABDC"
 memo = [[0]*len(seq1) for i in range(len(seq2))]
 
+
 for i in range(len(seq2)):
     for j in range(len(seq1)):
         seq2i = seq2[i]
@@ -24,4 +25,6 @@ for i in range(len(seq2)):
             memo[i][j] = max(memo[i-1][j], memo[i][j-1])
         else:
             print(seq2[i], seq1[j])
-print(memo)
+
+for row in memo:
+    print(row)

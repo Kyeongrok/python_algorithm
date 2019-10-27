@@ -11,4 +11,4 @@ def sieve(number):
         if prime[p]:
             print(p)
 
-sieve(54)
+sieve(100)
