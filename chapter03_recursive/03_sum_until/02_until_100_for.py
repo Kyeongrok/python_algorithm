@@ -1,5 +1,5 @@
 def sum(num):
-    result = 0;
+    result = 0
     while (num > 0):
         result = result + num
         num = num - 1
