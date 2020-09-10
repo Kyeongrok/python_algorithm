@@ -31,5 +31,7 @@ class linked_list:
         print(elems)
 
 list = linked_list()
+list.append(1)
+list.append(2)
 list.display()
 
