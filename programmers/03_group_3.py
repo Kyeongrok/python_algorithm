@@ -2,7 +2,7 @@
 # 팀을 k개로 쪼갤 때
 def solution(scores, k):
     scores = sorted(scores)
-    dp = [[None] * len(scores) for i in range(k)]
+    dp = [[0] * len(scores) for i in range(k)]
     '''
             1   3   7                                           
         1   0   2   6                                           
@@ -22,17 +22,27 @@ def solution(scores, k):
                     # j가 2면 2개를 더하고 j가 3이면 3개를 더해야 한다.
                     min_val = dp[i - 1][j - l - 1] + scores[j] - scores[j - l]
                     ll.append(min_val)
-                    # print(i, j, l, ll)
-                    print(ll)
                 dp[i][j] = min(ll)
     for d in dp:
-        print(d)
+        print('dp:',d)
     # n과 n+1의
     return dp[k-1][len(scores)-1]
 
 
-# print(solution([1,2,12,14,15], 2) == 4)
-# print(solution([1,2,12,14,15,16], 2) == 5)
+print(solution([1,2,12,14,15], 2) == 4)
+print(solution([1,2,12,14,15,16], 2) == 5)
 print(solution([1,2,12,14,15,20], 2) == 9)
-# print(solution([1,2,12,14,15], 3) == 2)
-# print(solution([2,12,14,15], 3) == 1)
+print(solution([1,2,12,14,15], 2) == 4)
+print(solution([1,2,12,14], 3) == 1)
+print(solution([1,2,12,14,15], 3) == 2)
+print(solution([2,12,14,15], 3) == 1)
+
+'''
+앞에꺼와 차이는 
+dp = [[None] * len(scores) for i in range(k)]
+dp = [[0] * len(scores) for i in range(k)]
+이거 차이였음. 
+solution([1,2,12,14], 3)의 경우
+1, 2, 12 만 있을때의 2개 solution([1,2,12], 2)에서 계산해 놓은 것을 참조한다.
+그런데 None이면 0으로 계산 되어야 할 것이 None이므로 +연산이 안되서 에러가 난다.
+'''
