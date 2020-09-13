@@ -1,5 +1,5 @@
-# max - min이 최소가 되는 점수를 return
-# 팀을 k개로 쪼갤 때
+# 팀을 k개로 쪼갤 때 max - min이 최소가 되는 점수를 return
+#
 def solution(scores, k):
     scores = sorted(scores)
     dp = [[0] * len(scores) for i in range(k)]
@@ -17,17 +17,13 @@ def solution(scores, k):
                 dp[i][j] = scores[j] - scores[0]
             elif j > i:
                 ll = [dp[i - 1][j - 1]]
-
                 for l in range(1, j):
-                    # j가 2면 2개를 더하고 j가 3이면 3개를 더해야 한다.
                     min_val = dp[i - 1][j - l - 1] + scores[j] - scores[j - l]
                     ll.append(min_val)
                 dp[i][j] = min(ll)
     for d in dp:
         print('dp:',d)
-    # n과 n+1의
     return dp[k-1][len(scores)-1]
-
 
 print(solution([1,2,12,14,15], 2) == 4)
 print(solution([1,2,12,14,15,16], 2) == 5)
