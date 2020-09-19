@@ -19,4 +19,4 @@ def solution2(list):
 
 
 print(solution(list))
-# print(solution2(list))
+# print(solution2(list_lecture))

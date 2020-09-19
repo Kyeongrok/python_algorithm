@@ -15,5 +15,5 @@ def solution2(list):
     return result
 
 # max
-# print('=>', solution(list))
+# print('=>', solution(list_lecture))
 print('=>', solution2(list))

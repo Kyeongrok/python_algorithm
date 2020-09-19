@@ -19,7 +19,7 @@ def solution(n, lost, reserve):
                 r+=1
 
     result = n - lost_cnt + len(lent) + cnt_my_self
-    # print(n, lost_cnt, len(lent), len(list(set(lost) & set(reserve))), lent, result, list(set(lost) & set(reserve)))
+    # print(n, lost_cnt, len(lent), len(list_lecture(set(lost) & set(reserve))), lent, result, list_lecture(set(lost) & set(reserve)))
     return result
 
 n = 5
