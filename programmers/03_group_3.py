@@ -34,7 +34,7 @@ print(solution([1,2,12,14,15], 3) == 2)
 print(solution([2,12,14,15], 3) == 1)
 
 '''
-앞에꺼와 차이는 
+앞에 코드와 차이점은 
 dp = [[None] * len(scores) for i in range(k)]
 dp = [[0] * len(scores) for i in range(k)]
 이거 차이였음. 
