@@ -1,4 +1,3 @@
-# 통과한 code
 def solution(n, lost, reserve):
 
     _reserve = []

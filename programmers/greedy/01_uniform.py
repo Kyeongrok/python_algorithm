@@ -1,6 +1,5 @@
 def solution(n, lost, reserve):
     lent = []
-    cnt_my_self = 0
 
     inter = list(set(lost) & set(reserve))
     for i in inter:
@@ -18,7 +17,7 @@ def solution(n, lost, reserve):
             else:
                 r+=1
 
-    result = n - lost_cnt + len(lent) + cnt_my_self
+    result = n - lost_cnt + len(lent)
     # print(n, lost_cnt, len(lent), len(list_lecture(set(lost) & set(reserve))), lent, result, list_lecture(set(lost) & set(reserve)))
     return result
 
