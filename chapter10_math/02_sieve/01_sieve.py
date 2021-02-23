@@ -1,5 +1,6 @@
 def sieve(number):
-    prime = [True for number in range(number + 1)]
+    numbers = list(range(0, number + 1))
+    prime = [True for number in range(0, number + 1)]
     p = 2
     while(p * p <= number):
         if prime[p] == True:
@@ -9,6 +10,6 @@ def sieve(number):
 
     for p in range(2, number):
         if prime[p]:
-            print(p)
+            print(numbers[p])
 
 sieve(100)
