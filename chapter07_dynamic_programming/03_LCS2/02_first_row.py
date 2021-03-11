@@ -18,5 +18,5 @@ def solution(seq1, seq2):
     print(len(dp))
 
 seq1 = "ABCDCBA"
-seq2 = "DCABDC"
+seq2 = "DCABBA"
 solution(seq1, seq2)

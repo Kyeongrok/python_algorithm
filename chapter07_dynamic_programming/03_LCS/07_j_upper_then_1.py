@@ -1,5 +1,5 @@
-seq1 = "ABCDCBA"
-seq2 = "DCABDC"
+seq1 = "ABCDCB" # DCB
+seq2 = "DCAB" # DCABB 4개
 memo = [[0]*len(seq1) for i in range(len(seq2))]
 
 
