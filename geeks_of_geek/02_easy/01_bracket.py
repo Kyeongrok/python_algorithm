@@ -9,3 +9,6 @@ for letter in brackets:
     stack_a.append(letter)
 
 stack_a.pop()
+
+for idx in range(0, 10):
+    print(idx)
