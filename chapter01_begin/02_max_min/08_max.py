@@ -1,4 +1,4 @@
-list = [3, 8, 9, 6, 2]
+list = [9, 22, 3, 7, 4, 5]
 max = 0
 for num in list:
     print(num)
