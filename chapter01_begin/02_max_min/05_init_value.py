@@ -1,5 +1,5 @@
 def solution(numbers):
-    result = 0
+    result = numbers[0] # numbers의 첫번째 값을 할당하고 시작
     for num in numbers:
         if num > result:
             result = num

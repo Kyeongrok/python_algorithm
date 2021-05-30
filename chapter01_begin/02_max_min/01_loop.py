@@ -1,6 +1,6 @@
-def solution(list):
-    for num in list:
+def solution(numbers):
+    for num in numbers: # numbers에서 num을 하나씩 뽑는다
         print(num)
 
-list = [9, 22, 3, 7, 4, 5]
+numbers = [9, 22, 3, 7, 4, 5]
 solution(list)

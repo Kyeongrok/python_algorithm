@@ -1,10 +1,10 @@
 def solution(numbers):
-    result = 0
-    for num in numbers:
+    result = numbers[0] # numbers의 첫번째 값을 할당하고 시작
+    for num in numbers[1:]:
         if num > result:
             result = num
         print(num, result)
     return result
 
 numbers = [-9, -22, -3, -7, -4, -5]
-print(solution(numbers))
+print(numbers.index(solution(numbers)))

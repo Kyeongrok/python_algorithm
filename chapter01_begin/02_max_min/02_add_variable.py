@@ -1,7 +1,7 @@
-def solution(list):
+def solution(numbers):
     result = 0
-    for num in list:
+    for num in numbers:
         print(num)
 
-list = [9, 22, 3, 7, 4, 5]
-solution(list)
+numbers = [9, 22, 3, 7, 4, 5]
+solution(numbers)
