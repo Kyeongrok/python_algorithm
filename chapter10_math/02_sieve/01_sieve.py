@@ -1,5 +1,5 @@
+from datetime import datetime
 def sieve(number):
-    numbers = list(range(0, number + 1))
     prime = [True for number in range(0, number + 1)]
     p = 2
     while(p * p <= number):
@@ -8,8 +8,9 @@ def sieve(number):
                 prime[i] = False
         p = p + 1
 
-    for p in range(2, number):
+    for p in range(0, number):
         if prime[p]:
-            print(numbers[p])
-
-sieve(100)
+            print(p)
+start = datetime.now()
+sieve(100000000)
+print(datetime.now() - start)
