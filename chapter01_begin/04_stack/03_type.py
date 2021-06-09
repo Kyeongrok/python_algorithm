@@ -1,2 +1,0 @@
-stack = []
-print(type(stack))

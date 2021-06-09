@@ -1,2 +1,0 @@
-backendTeam = {}
-print(backendTeam)

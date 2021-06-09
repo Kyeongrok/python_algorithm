@@ -8,6 +8,8 @@ def duplicate_number(arr):
             seen.add(arr[i])
     return -1
 
+
+# -1, 1은 같은 것으로
 def duplicate_number_advanced(arr):
     for i in range(len(arr)):
         if arr[abs(arr[i]) - 1] < 0:
