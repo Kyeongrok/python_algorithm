@@ -1,4 +1,3 @@
-
 def solution(pw):
     # h i j k
     for h in range(0, 10):
