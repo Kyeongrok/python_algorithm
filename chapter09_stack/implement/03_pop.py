@@ -14,8 +14,12 @@ class Stack1():
         self.last_index -= 1
         return value
 
+
 st = Stack1()
 st.push(15)
 st.push(20)
+print(st.arr[:10])
 print(st.pop())
-print(st.pop())
+print(st.arr[:10])
+st.push(30)
+print(st.arr[:10])

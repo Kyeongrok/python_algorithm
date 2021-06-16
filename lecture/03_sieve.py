@@ -18,7 +18,7 @@ def sieve(n):
 
     return r
 
-print(sieve(100000000))
+print(sieve(10000000))
 
 
 # 99999989
