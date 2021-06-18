@@ -8,9 +8,9 @@ def sieve(number):
                 prime[i] = False
         p = p + 1
 
-    for p in range(0, number):
+    for p in range(2, number):
         if prime[p]:
             print(p)
 start = datetime.now()
-sieve(100000000)
+sieve(100)
 print(datetime.now() - start)

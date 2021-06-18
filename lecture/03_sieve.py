@@ -5,7 +5,7 @@ def sieve(n):
     check =  [True] * len(ns)
 
     i = 0
-    while ns[i] < sqrt(n):
+    while ns[i] * ns[i] < n:
         if check[i] == True:
             for j in range(i + ns[i], len(ns), ns[i]): # i는 check[i]가 True일 때만 연산합니다.
                 check[j] = False
@@ -18,7 +18,9 @@ def sieve(n):
 
     return r
 
-print(sieve(10000000))
+result = sieve(10000000)
+# print(result)
+print(len(result))
 
 
 # 99999989
