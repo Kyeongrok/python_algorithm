@@ -14,3 +14,7 @@ for i in range(len(check)):
         res.append(ns[i])
 
 print(len(res), res)
+
+from math import sqrt
+
+print(sqrt(123))
