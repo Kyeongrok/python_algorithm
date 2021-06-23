@@ -1,4 +1,4 @@
-n = 50
+N = 50
 ns = list(range(2, n + 1))
 
 print(ns)
