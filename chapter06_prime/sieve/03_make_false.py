@@ -4,10 +4,8 @@ check = [True] * len(ns)
 
 i = 0
 while ns[i] * ns[i] <= N:
-    for j in range(len(ns)):
-        if ns[j] % ns[i] == 0:
+    if check[i]:
+        for j in range(2, len(ns), 2):
             check[j] = False
-        print(ns[i], ns[j], ns[j] % ns[i] == 0)
+            print(ns[i], ns[j])
     i += 1
-
-print(check)

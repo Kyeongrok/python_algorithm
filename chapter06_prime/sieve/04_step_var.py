@@ -5,5 +5,7 @@ check = [True] * len(ns)
 i = 0
 while ns[i] * ns[i] <= N:
     if check[i]:
-        print(i, ns[i], check[i])
+        for j in range(ns[i] + i, len(ns), ns[i]):
+            check[j] = False
+            print(ns[i], ns[j])
     i += 1

@@ -4,14 +4,13 @@ check = [True] * len(ns)
 
 i = 0
 while ns[i] * ns[i] <= N:
-    for j in range(len(ns)):
-        if ns[j] % ns[i] == 0:
+    if check[i]:
+        for j in range(ns[i] + i, len(ns), ns[i]):
             check[j] = False
-    print(ns[i], check) # 중간결과 표시
     i += 1
 
 primes = []
-for i in range(len(ns)):
+for i in range(len(check)):
     if check[i]:
         primes.append(ns[i])
 print(len(primes), primes)
