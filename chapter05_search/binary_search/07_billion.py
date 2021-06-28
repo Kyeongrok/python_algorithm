@@ -13,4 +13,4 @@ def binarySearch(arr, targetNum):
         elif arr[midIndex] > targetNum:
             end = midIndex - 1
     return -1
-print(binarySearch(arr, 9610))
+print(binarySearch(arr, 9610000))
