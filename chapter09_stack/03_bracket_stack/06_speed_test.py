@@ -12,7 +12,7 @@ def solution(s):
             st.pop()
     return st.empty()
 
-s = '(' * 5000000 + ')'*5000000
-print(datetime.now())
-print('result:', solution(s))
-print(datetime.now())
+s = '(' * 50000000 + ')'*50000000
+start_time = datetime.now()
+print(f's_cnt:{len(s)} result:{solution(s)}')
+print(datetime.now() - start_time)

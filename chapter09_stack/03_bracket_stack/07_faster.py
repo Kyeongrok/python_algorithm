@@ -11,7 +11,7 @@ def solution(s):
             open_bracket_cnt -=1
     return open_bracket_cnt == 0
 
-s = '(' * 5000000 + ')'*5000000
-print(datetime.now())
+s = '(' * 50000000 + ')'*50000000
+start_time = datetime.now()
 print('result:', solution(s))
-print(datetime.now())
+print(datetime.now() - start_time)

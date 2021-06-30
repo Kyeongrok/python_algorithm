@@ -5,4 +5,4 @@ def solution(s):
     return len(s) == 0
 
 s = '()((()))'   # 길이 8의 문자열
-print('final s:', solution(s))
+print('result:', solution(s))

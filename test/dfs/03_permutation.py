@@ -7,4 +7,4 @@ def perm(input, i):
             perm(input, i + 1)
             input[i], input[j] = input[j], input[i]
 
-perm(['치과','내과','안과'], 0)
+perm(['A','B','C'], 0)
