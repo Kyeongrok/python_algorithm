@@ -1,4 +1,5 @@
 from st1 import Stack1
+from datetime import datetime
 
 def is_pair(first, second):
     if first == '(' and second == ')':
@@ -24,6 +25,8 @@ s = ')((()))'   # 길이 7의 문자열
 s = '{}(([]))'   # 길이 8의 문자열
 s = '()((()))'   # 길이 8의 문자열
 s = '(' * 2000000 + ')'*2000000
-s = f'{"("*(2*pow(10,7))}{"{"*(2*pow(10,7))}{"["*(2*pow(10,7))}{"]"*(2*pow(10,7))}{"}"*(2*pow(10,7))}{")"*(2*pow(10,7))}'
-print(len(s))
+
+s = f'{"("*(2*pow(10,4))}{"{"*(2*pow(10,4))}{"["*(2*pow(10,4))}{"]"*(2*pow(10,4))}{"}"*(2*pow(10,4))}{")"*(2*pow(10,4))}'
+start_time = datetime.now()
 print('result:', solution(s))
+print(datetime.now() - start_time)
