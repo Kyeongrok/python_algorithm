@@ -6,4 +6,3 @@ for i in range(1, len(numbers)):
         if numbers[j] < numbers[i]:
             memo[i] = memo[j] + 1
     print(i, memo)
-print("result:", memo)
