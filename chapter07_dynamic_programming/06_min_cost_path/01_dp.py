@@ -8,8 +8,8 @@ def getMinCost(matrix):
     return 0
 
 matrix = [
-    [1,2,2],
-    [4,6,3],
+    [1,3,2],
+    [4,6,2],
     [1,2,4]
 ]
 print(getMinCost(matrix))
