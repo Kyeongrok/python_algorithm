@@ -19,7 +19,6 @@ def with_regex(s):
 
 s = f'{"("*(2*pow(10,4))}{"{"*(2*pow(10,4))}{"["*(2*pow(10,4))}{"]"*(2*pow(10,4))}{"}"*(2*pow(10,4))}{")"*(2*pow(10,4))}'
 start_time = datetime.now()
-# print(while1(s))
 print(with_regex(s))
 print(datetime.now() - start_time)
 
