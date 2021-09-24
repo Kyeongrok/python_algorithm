@@ -23,3 +23,10 @@ print(st.pop())
 print(st.arr[:10])
 st.push(30)
 print(st.arr[:10])
+
+
+total = 30
+gsp = 4
+td = 2.8 * 6
+
+print(td)

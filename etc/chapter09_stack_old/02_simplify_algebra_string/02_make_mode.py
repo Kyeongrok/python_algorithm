@@ -17,7 +17,7 @@ def simplify(str):
                 stack.pop()
         else:
             result = result + chr
-        print("chapter09_stack:", stack)
+        print("chapter05_stack:", stack)
     return result
 
 statement1 = "a-(b+c)"
