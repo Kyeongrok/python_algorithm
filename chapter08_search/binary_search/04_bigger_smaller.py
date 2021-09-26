@@ -1,20 +1,22 @@
-arr = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
-def binarySearch(arr, targetNum):
-    start = 0
-    end = len(arr) - 1
-    midIndex = len(arr) // 2
-    indexValue = arr[midIndex]
-    if indexValue == targetNum:
-        return midIndex
-    elif indexValue < targetNum:
-        start = midIndex + 1
-    elif indexValue > targetNum:
-        end = midIndex - 1
+def binary_search(arr, target_num):
+   start = 0
+   end = len(arr) - 1
+   mid_index = (start + end) // 2
+   index_value = arr[mid_index]
+   print(start, end, mid_index, "index_value:",index_value)
 
-    print("start:",start, "end:", end)
-    return -1
+   if index_value == target_num:
+       return mid_index
+   elif index_value < target_num:
+       start = mid_index + 1
+   elif index_value > target_num:
+       end = mid_index - 1
 
-# 1------5----8--11
-# 5----8--11
-print(binarySearch(arr, 8))
+   print("start:",start, "end:",end, "mid_index:", mid_index,
+         "target_num:", target_num, "index_value:",index_value)
+
+   return -1
+
+print(binary_search(numbers, 4))
