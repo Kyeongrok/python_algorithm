@@ -7,5 +7,5 @@ for i in range(2, int(sqrt(N)) + 1): # 루트 N이하의 자연수
     for j in range(len(ns) - 1, 1, -1):
         if ns[j] % i == 0:
             ns.pop(j)
-    print(i, len(ns), ns)
+    print(f'{i}의 배수제거:', len(ns), ns)
 
