@@ -1,9 +1,9 @@
 numbers = [2, 7, 3, 9]
 
-for indexBack in range(2, len(numbers)):
-   if numbers[1] > numbers[indexBack]:
+for ib in range(2, len(numbers)):
+   if numbers[1] > numbers[ib]:
        temp = numbers[1]
-       numbers[1] = numbers[indexBack]
-       numbers[indexBack] = temp
+       numbers[1] = numbers[ib]
+       numbers[ib] = temp
 
    print(numbers)
