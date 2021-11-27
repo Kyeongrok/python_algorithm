@@ -13,7 +13,7 @@ name = 'chulsoo'
 
 # hash() 내장 함수
 result = hash(name)
-print(result)
+print('hash():', result)
 
 #hashlib 활용, md5
 name = name.encode('utf-8')
