@@ -11,9 +11,9 @@ def nameHash(name):
 name = 'chulsoo'
 # print(nameHash(name))
 
-# hash() 내장 함수
+# res_hash() 내장 함수
 result = hash(name)
-print('hash():', result)
+print('res_hash():', result)
 
 #hashlib 활용, md5
 name = name.encode('utf-8')
