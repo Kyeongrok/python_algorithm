@@ -22,5 +22,5 @@ def solution(s, n):
             r += c
     return r
 
-print(solution("b", 25))
+print(solution("b", 25)) # a
 
