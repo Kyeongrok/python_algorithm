@@ -8,13 +8,19 @@ def calc_chr(c, n):
         theta = 96
 
     # ascii형으로 변경
-    r = (ord(c) - theta) % 26 + n
+    r = (ascii - theta) % 26 + n
+    while r > 26: # b 25인 경우 {가 나올 수 있음
+        r = r % 26
     return chr(theta + r)
 
 def solution(s, n):
     r = ""
     for c in s:
-        r += calc_chr(c, n)
+        if c != ' ':
+            r += calc_chr(c, n)
+        else:
+            r += c
     return r
 
-print(solution("ABC", 2))
+print(solution("b", 25))
+
