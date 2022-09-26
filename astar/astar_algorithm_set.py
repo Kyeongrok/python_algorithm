@@ -76,53 +76,52 @@ def expand_child(node: AStar):  # node가 어떤 방향으로 이동할 수 있�
      하나를 curent_node에 넣기
 """
 
+def list_to_str(l):
+    r = ""
+    for n in l:
+        r += str(n)
+    return r
 
 def problem_solver(node: AStar):
     """
         open_list는 생성된 child node를 넣고
         이 node에 대한 child node를 생성해서 또 open_list에 넣는다
         탐색 성공이 출력되게 하는 것
-
     """
-    open_list = PriorityQueue() # 선입선출 + 우선순위
-    open_list.put(node)  # h, problem에 대한 pq
-    open_set = [node.problem]
-    closed_list = []
+
+    open_queue = PriorityQueue() # 선입선출 + 우선순위
+    open_queue.put(node)  # h, problem에 대한 pq
+    open_set = set()
+    open_set.add(list_to_str(node.problem))
+    closed_set = set()
     solve_path = []
 
     while_cnt = 0
-    # while not open_list.empty():
-    for _ in range(3):
+    while not open_queue.empty():
+    # for _ in range(3):
         while_cnt += 1
 
-        print(f'while_cnt:{while_cnt} open_set:{open_set}', )
+        print(f'while_cnt:{while_cnt} open_set_cnt:{len(open_set)} open_queue_cnt:{open_queue.qsize()}', )
 
-        current_list = open_list.get()
+        current_list = open_queue.get()
         # print(current_list.problem)
         if current_list.problem == node.answer:
             print("탐색 성공")
             break
         # print(current_list.problem, open_set)
-        open_set.remove(current_list.problem)
-        closed_list.append(current_list.problem)
+        open_set.remove(list_to_str(current_list.problem))
+        closed_set.add(list_to_str(current_list.problem))
         for state in expand_child(current_list):    # ()안에 노드 여야함
-            print('problem, f', state.problem, state.f())
-            if state.problem in closed_list :  # close set에 있으면 넘어가기
+            print(f'problem:{state.problem}, f:{state.f()} h:{state.h()}  closed_list_cnt:{len(closed_set)}')
+            if list_to_str(state.problem) in closed_set :  # close set에 있으면 넘어가기
                 print(f'중복 노선 while_cnt:{while_cnt}', state.problem, open_set)
                 continue
-            if state.problem not in open_set:  # openset에 없으면 새로운거니까 추가
+            if list_to_str(state.problem) not in open_set:  # openset에 없으면 새로운거니까 추가
                 # print(state.problem, open_se)
 
                 # 중복 check
-                open_set.append(state.problem) # 여기에서 중복이 발생 할 수 있다.
-                open_list.put(state)
-                # solve_path.add(str(current_list.problem))
-                # print(state.f(), state.problem)
-            # if current_list.f() >= state.f():
-            #     # print("f값이 큰것들은 버림")
-            #     continue
-        # current_list = open_list.get()
-        # print(current_list)
+                open_set.add(list_to_str(state.problem)) # 여기에서 중복이 발생 할 수 있다.
+                open_queue.put(state)
     return solve_path
 
 
