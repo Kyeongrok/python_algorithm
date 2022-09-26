@@ -35,11 +35,15 @@ class AStar:
         size = 3
         for i in range(9):
             goal_id = self.answer[i]
+            # print(f'goal_id:{goal_id} {self.problem} {self.answer}')
             g_x = i // size
             g_y = i % 3
-            p_x = self.problem[goal_id] // size
-            p_y = self.problem[goal_id] % 3
+            # 2를 3으로 나누었을때 몫이 2가 나와야 하는데 왜 1이 나오냐 이기
+            p_x = self.problem.index(goal_id) // size # 0이 나와야 하는데 왜 1이 나옴?
+            p_y = self.problem.index(goal_id) % 3
             dist += abs(p_x - g_x) + abs(p_y - g_y)
+            # print(g_x, g_y)
+            # print(p_x, p_y)
         return dist
 
 
@@ -98,12 +102,13 @@ def problem_solver(node: AStar):
 
     while_cnt = 0
     while not open_queue.empty():
-    # for _ in range(3):
+    # for _ in range(6):
         while_cnt += 1
 
         print(f'while_cnt:{while_cnt} open_set_cnt:{len(open_set)} open_queue_cnt:{open_queue.qsize()}', )
 
         current_list = open_queue.get()
+        print('current_list:', current_list.problem)
         # print(current_list.problem)
         if current_list.problem == node.answer:
             print("탐색 성공")
@@ -113,15 +118,17 @@ def problem_solver(node: AStar):
         closed_set.add(list_to_str(current_list.problem))
         for state in expand_child(current_list):    # ()안에 노드 여야함
             print(f'problem:{state.problem}, f:{state.f()} h:{state.h()}  closed_list_cnt:{len(closed_set)}')
-            if list_to_str(state.problem) in closed_set :  # close set에 있으면 넘어가기
-                print(f'중복 노선 while_cnt:{while_cnt}', state.problem, open_set)
-                continue
-            if list_to_str(state.problem) not in open_set:  # openset에 없으면 새로운거니까 추가
+            # open_set에도 없고 closed_set에도 없으면 open_set과 open_queue에 넣어라
+            # 왜냐하면 방문한 적이 없기 때문이다 closed_set에 없으면 방문한 적이 없는거니까
+            if list_to_str(state.problem) not in open_set and list_to_str(state.problem) not in closed_set:  # open_set에 없으면 새로운거니까 추가
                 # print(state.problem, open_se)
 
                 # 중복 check
                 open_set.add(list_to_str(state.problem)) # 여기에서 중복이 발생 할 수 있다.
                 open_queue.put(state)
+            if list_to_str(state.problem) in closed_set :  # close set에 있으면 넘어가기
+                print(f'중복 노선 while_cnt:{while_cnt}', state.problem, open_set)
+                continue
     return solve_path
 
 
@@ -141,6 +148,7 @@ def print_path(start, goal, past):
 
 if __name__ == "__main__":
     puzzle = [2, 8, 3, 1, 6, 4, 7, 0 ,5]
+    # goal = [2, 8, 3, 1, 6, 4, 7, 5 ,0]
     goal = [1, 2, 3, 4, 5, 6, 7, 8, 0]
     start = AStar(problem=puzzle, answer=goal)
     # marked = fuck(start)
